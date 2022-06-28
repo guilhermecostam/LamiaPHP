@@ -1,0 +1,126 @@
+
+/* My variable colors */
+:root {
+  --primary-color: #3498DB;
+  --second-color: #71c1f7;
+  --black-color: #000000;
+  --black-color-medium: #0c0c0c;
+  --semi-black: #1e1e1e;
+  --white-color: #ffffff;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+body {
+  font-size: 1.6rem;
+  -webkit-font-smooting: antialiased;
+  background-color: var(--black-color-medium);
+}
+
+/* Grid normal 12columns */
+.container {
+  width: 100%;
+  max-width: 1246px;
+  margin: 0 auto;
+  padding: 0rem 1.5rem;
+}
+
+/* Title Patterns */
+h2 {
+  font-family: "Inter";
+  font-weight: 800;
+  font-size: 6.4rem;
+  line-height: 7.7rem;
+  color: var(--white-color);
+  margin-top: 2rem;
+}
+
+h2 span {
+  color: var(--primary-color);
+}
+
+/* Section hero */
+.s-hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.s-hero .container .title-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 59.2rem;
+  margin-top: 19rem;
+  padding-bottom: 6rem;
+}
+
+.s-hero .container .title-box h1 {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 6.4rem;
+  line-height: 7.7rem;
+  text-align: center;
+  color: var(--white-color);
+}
+
+.s-hero .container .title-box h1 .name{
+  color: var(--primary-color);
+}
+
+.s-hero .container .title-box h2 {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  text-align: center;
+  color: var(--white-color);
+  margin-bottom: 3.2rem;
+}
+
+.s-hero .container .title-box a {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 2.2rem;
+  text-align: center;
+  color: var(--white-color);
+  transition: all 0.2s;
+}
+
+.s-hero .container .title-box a:hover {
+  filter: brightness(80%);
+  transform: translateY(-10%);
+  text-decoration: underline;
+}
+
+/* Resposive */
+@media (max-width: 500px) {
+  html {
+    font-size: 50.2%;
+  }
+}

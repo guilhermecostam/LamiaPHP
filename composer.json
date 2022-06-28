@@ -1,0 +1,16 @@
+{
+    "name": "guilhermecostam/php-mvc-template",
+    "description": "My own mvc template for simple php projects.",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Guilherme Costa de Medeiros",
+            "email": "guilhermecostadev@gmail.com"
+        }
+    ]
+}
