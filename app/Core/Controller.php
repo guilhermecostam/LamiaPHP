@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controller;
+namespace App\Core;
 
-abstract class AbstractController
+abstract class Controller
 {
 	protected function render(string $viewName, array $data = null): void
 	{

@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
-class ErrorController extends AbstractController
+use App\Core\Controller;
+
+class ErrorController extends Controller
 {
 	public function notFound(): void
 	{
