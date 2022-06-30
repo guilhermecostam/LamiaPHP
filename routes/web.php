@@ -1,17 +1,10 @@
 <?php
 
+use App\Core\Router;
 use App\Controller\IndexController;
 
-function createRoute(string $controllerName, string $methodName): array
-{
-	return [
-		'controller' => $controllerName,
-		'method' => $methodName
-	];
-}
-
 $routes = [
-	'/' => createRoute(IndexController::class, 'indexAction'),
+	'/' => Router::createRoute(IndexController::class, 'indexAction'),
 ];
 
 return $routes;
