@@ -12,5 +12,8 @@
             "name": "Guilherme Costa de Medeiros",
             "email": "guilhermecostadev@gmail.com"
         }
-    ]
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
 }
