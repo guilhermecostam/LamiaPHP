@@ -4,7 +4,7 @@ use App\Controller\ErrorController;
 
 include __DIR__ . '/../vendor/autoload.php';
 
-$uri = explode('?', $_SERVER['REQUEST_URI'])[0];
+$uri = reset(explode('?', $_SERVER['REQUEST_URI']));
 
 $routes = include __DIR__ . '/../routes/web.php';
 

@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="/css/app.css" />
 
     <meta name="author" content="Guilherme Costa de Medeiros">
-    <meta name="keywords" content="mvc, php, template, web">
-    <meta name="description" content="My own mvc template for simple php projects.">
+    <meta name="keywords" content="mvc, php, framework, web">
+    <meta name="description" content="My own mvc framework for simple php projects.">
     <title>Welcome</title>
   </head>
   <body>

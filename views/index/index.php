@@ -5,10 +5,10 @@
         <div class="container">
           <div class="title-box">
             <h1>
-                MVC<span class="name"> Template</span>
+                MVC<span class="name"> Framework</span>
             </h1>
-            <h2>My own mvc template for simple php projects</h2>
-            <a href="https://github.com/guilhermecostam/php-mvc-template" target="_blank">Repository</a>
+            <h2>My own mvc framework for simple php projects</h2>
+            <a href="https://github.com/guilhermecostam/php-mvc-framework" target="_blank">Repository</a>
           </div>
         </div>
       </section>

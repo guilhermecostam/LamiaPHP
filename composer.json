@@ -1,6 +1,6 @@
 {
-    "name": "guilhermecostam/php-mvc-template",
-    "description": "My own mvc template for simple php projects.",
+    "name": "guilhermecostam/php-mvc-framework",
+    "description": "My own mvc framework for simple php projects.",
     "type": "project",
     "autoload": {
         "psr-4": {
