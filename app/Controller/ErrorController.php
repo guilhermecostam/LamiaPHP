@@ -3,11 +3,12 @@
 namespace App\Controller;
 
 use App\Core\Controller;
+use App\Core\View;
 
 class ErrorController extends Controller
 {
 	public function notFound(): void
 	{
-		parent::render('error/404');
+		View::render('error/404');
 	}
 }

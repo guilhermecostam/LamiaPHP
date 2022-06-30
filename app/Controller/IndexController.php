@@ -3,11 +3,12 @@
 namespace App\Controller;
 
 use App\Core\Controller;
+use App\Core\View;
 
 class IndexController extends Controller
 {
 	public function indexAction(): void
 	{
-		parent::render('index/index');
+		View::render('index/index');
 	}
 }
