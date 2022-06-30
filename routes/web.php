@@ -1,10 +1,7 @@
 <?php
 
-use App\Core\Router;
-use App\Controller\IndexController;
-
-$routes = [
-	'/' => Router::createRoute(IndexController::class, 'indexAction'),
-];
+$routes = array_merge(
+	include 'welcome.php',
+);
 
 return $routes;
