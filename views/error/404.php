@@ -1,5 +1,3 @@
-<h1>404 - Página não encontrada</h1>
-
 <?php include __DIR__ . '/_partials/header.php'; ?>
 
     <main>
