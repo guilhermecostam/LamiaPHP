@@ -4,7 +4,7 @@ namespace App\Core;
 
 class Router
 {
-    public static function createRoute(string $controllerName, string $methodName): array
+    public function createRoute(string $controllerName, string $methodName): array
     {
         return [
             'controller' => $controllerName,
