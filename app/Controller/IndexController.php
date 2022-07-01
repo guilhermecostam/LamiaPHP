@@ -9,6 +9,6 @@ class IndexController extends Controller
 {
 	public function indexAction(): void
 	{
-		View::render('index/index');
+		(new View)->render('index/index');
 	}
 }

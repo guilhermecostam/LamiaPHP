@@ -9,6 +9,6 @@ class ErrorController extends Controller
 {
 	public function notFound(): void
 	{
-		View::render('error/404');
+		(new View)->render('error/404');
 	}
 }
