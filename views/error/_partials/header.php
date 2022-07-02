@@ -1,10 +1,9 @@
+<?php $metaTags = include __DIR__ . '../../../../resources/meta/error.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv=”content-language” content=”en”>
+    <?php include __DIR__ . '../../../../resources/meta/general.php'; ?>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,9 +13,7 @@
     />
     <link rel="stylesheet" href="/css/app.css" />
 
-    <meta name="author" content="Guilherme Costa de Medeiros">
-    <meta name="keywords" content="mvc, php, framework, web">
-    <meta name="description" content="My own mvc framework for simple php projects.">
-    <title>404 - Page not found</title>
+    <meta name="description" content="<?php echo $metaTags['description']; ?>">
+    <title><?php echo $metaTags['title']; ?></title>
   </head>
   <body>
