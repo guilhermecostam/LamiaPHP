@@ -1,9 +1,9 @@
-<?php $metaTags = include __DIR__ . '../../../../resources/meta/index.php'; ?>
+<?php $metaTags = include __DIR__ . '../../../../meta/error.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <?php include __DIR__ . '../../../../resources/meta/general.php'; ?>
+    <?php include __DIR__ . '../../../../meta/general.php'; ?>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
