@@ -4,8 +4,9 @@ namespace App\Core;
 
 class View
 {
-	public function render(string $viewName): void
+	public function render(string $viewName, array $args = []): void
 	{
+		extract($args);
 		include __DIR__ . "/../../views/{$viewName}.php";
 	}
 
