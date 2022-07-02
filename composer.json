@@ -1,6 +1,6 @@
 {
-    "name": "guilhermecostam/php-mvc-framework",
-    "description": "My own mvc framework for simple php projects.",
+    "name": "guilhermecostam/lamiaphp",
+    "description": "A minimalist MVC framework for PHP",
     "type": "project",
     "autoload": {
         "psr-4": {

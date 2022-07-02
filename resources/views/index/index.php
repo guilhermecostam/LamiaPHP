@@ -5,10 +5,10 @@
         <div class="container">
           <div class="title-box">
             <h1>
-                MVC<span class="name"> Framework</span>
+                Lamia<span class="name">PHP</span>
             </h1>
-            <h2>My own mvc framework for simple php projects</h2>
-            <a href="https://github.com/guilhermecostam/php-mvc-framework" target="_blank">Repository</a>
+            <h2>A minimalist MVC framework for PHP</h2>
+            <a href="https://github.com/guilhermecostam/lamiaphp" target="_blank">Repository</a>
           </div>
         </div>
       </section>

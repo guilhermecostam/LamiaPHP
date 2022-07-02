@@ -1,2 +1,2 @@
-# php-mvc-framework
-My own mvc framework for simple php projects
+# LamiaPHP
+A minimalist MVC framework for PHP

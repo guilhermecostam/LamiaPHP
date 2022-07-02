@@ -2,5 +2,5 @@
 
 return [
     'title' => 'Welcome',
-    'description' => 'My own mvc framework for simple PHP projects.',
+    'description' => 'A minimalist MVC framework for PHP.',
 ];
