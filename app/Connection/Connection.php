@@ -3,28 +3,43 @@
 namespace App\Connection;
 
 use PDO;
+use PDOStatement;
 
 abstract class Connection
 {
-	private string $hostname;
-	private string $database;
-	private string $username;
-	private string $password;
+	private PDO $db;
 
 	public function __construct()
 	{
-		$this->hostname = $_ENV['HOSTNAME'];
-		$this->database = $_ENV['DB_NAME'];
-		$this->username = $_ENV['DB_USERNAME'];
-		$this->password = $_ENV['DB_PASSWORD'];
+		$this->db = new PDO(
+			"mysql:host={$_ENV['HOSTNAME']};dbname={$$_ENV['DB_NAME']}",
+			$_ENV['DB_USERNAME'],
+			$_ENV['DB_PASSWORD']
+		);
 	}
 	
-	public function getConnection(): PDO
+	public function query(string $sql, array $params = []): PDOStatement
 	{
-		return new PDO(
-			"mysql:host={$this->hostname};dbname={$this->database}",
-			$this->username,
-			$this->password
-		);
+		$statement = $this->db->prepare($sql);
+		if (!empty($params)) {
+			foreach ($params as $key => $val) {
+				$statement->bindValue(":{$key}", $val);
+			}
+		}
+		$statement->execute();
+
+		return $statement;
+	}
+
+	public function row(string $sql, array $params = []): array
+	{
+		$result = $this->query($sql, $params);
+		return $result->fetchAll(PDO::FETCH_ASSOC);
+	}
+
+	public function column(string $sql, array $params = []): mixed
+	{
+		$result = $this->query($sql, $params);
+		return $result->fetchColumn();
 	}
 }
