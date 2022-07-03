@@ -1,9 +1,9 @@
-<?php $metaTags = include __DIR__ . '../../../../meta/error.php'; ?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <?php include __DIR__ . '../../../../meta/general.php'; ?>
+    <meta charset="UTF-8" />
+    <meta http-equiv=”content-language” content=”en”>
+    <meta name="keywords" content="lamia, mvc, php, framework">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="/css/app.css" />
 
-    <meta name="description" content="<?php echo $metaTags['description']; ?>">
-    <title><?php echo $metaTags['title']; ?></title>
+    <meta name="description" content="Page for HTTP 404 errors.">
+    <title>404 - Not found</title>
   </head>
   <body>
