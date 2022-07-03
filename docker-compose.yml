@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  mysqlsrv:
+    image: mysql:8.0
+    environment:
+      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+      - MYSQL_USER=${DB_USERNAME}
+      - MYSQL_DATABASE=${DB_NAME}
+    ports:
+      - "3306:3306"
+    volumes:
+      - db:/var/lib/mysql
+    networks:
+      - mysql-compose-network
+volumes:
+  db:
+    driver: local
+networks: 
+  mysql-compose-network:
+    driver: bridge
