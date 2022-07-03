@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="/css/app.css" />
 
-    <meta name="description" content="Page for HTTP 404 errors.">
-    <title>404 - Not found</title>
+    <meta name="description" content="Page for HTTP errors.">
+    <title>HTTP Error</title>
   </head>
   <body>
