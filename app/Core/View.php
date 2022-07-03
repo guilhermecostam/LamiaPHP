@@ -7,7 +7,7 @@ class View
 	public function render(string $viewName, array $args = []): void
 	{
 		extract($args);
-		$path = __DIR__ . "/../../resources/views/{$viewName}.php";
+		$path = __DIR__ . "/../../views/{$viewName}.php";
 		if (file_exists($path)) {
 			include $path;
 		}
@@ -19,10 +19,11 @@ class View
 		exit;
 	}
 
-	public static function errorCode(string|int $code):void
+	public static function errorCode(int $code, array $args = []):void
 	{
+		extract($args);
 		http_response_code($code);
-		$path = __DIR__ . "/../../resources/views/error/{$code}.php";
+		$path = __DIR__ . "/../../views/error/{$code}.php";
 		if (file_exists($path)) {
 			include $path;
 		}
