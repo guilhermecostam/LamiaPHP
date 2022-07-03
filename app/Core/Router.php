@@ -28,7 +28,7 @@ class Router
     public function match():void
     {
         $this->routes = include __DIR__ . '/../../routes/web.php';
-        $this->uri = reset(explode('?', $_SERVER['REQUEST_URI']));
+        $this->uri = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
         
         if (!isset($this->routes[$this->uri])) {
             View::errorCode(404);
