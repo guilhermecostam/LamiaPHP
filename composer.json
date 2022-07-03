@@ -1,6 +1,7 @@
 {
     "name": "guilhermecostam/lamiaphp",
     "description": "A minimalist MVC framework for PHP",
+    "license": "MIT",
     "type": "project",
     "autoload": {
         "psr-4": {

@@ -1,6 +1,6 @@
 <?php
 
-use App\Controller\ErrorController;
+use App\Core\Router;
 
 include __DIR__ . '/../vendor/autoload.php';
 
@@ -11,15 +11,4 @@ if (!empty($dotEnv)) {
 	}
 }
 
-$uri = reset(explode('?', $_SERVER['REQUEST_URI']));
-
-$routes = include __DIR__ . '/../routes/web.php';
-if (!isset($routes[$uri])) {
-	(new ErrorController())->notFound();
-	exit;
-}
-
-$controllerName = $routes[$uri]['controller'];
-$methodName = $routes[$uri]['method'];
-
-(new $controllerName())->$methodName();
+(new Router())->run();
