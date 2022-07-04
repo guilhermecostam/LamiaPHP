@@ -1,5 +1,12 @@
 <?php
 
+$dotEnv = parse_ini_file(__DIR__ . '/.env');
+if (!empty($dotEnv)) {
+	foreach ($dotEnv as $key => $value) {
+		$_ENV[$key] = $value;
+	}
+}
+
 return
 [
     'paths' => [
