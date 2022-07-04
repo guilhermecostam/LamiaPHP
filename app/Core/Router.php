@@ -19,7 +19,8 @@ class Router
             !class_exists($controllerName) || 
             !method_exists($controllerName, $methodName)
         ) {
-            View::errorCode(404);
+            var_dump($controllerName);
+            //View::errorCode(404);
         }
 
         (new $controllerName())->$methodName();

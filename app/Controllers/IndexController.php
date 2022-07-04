@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controllers;
 
-use App\Request\IndexRequest;
+use App\Requests\IndexRequest;
 use App\Core\Controller;
 use App\Core\View;
 use Throwable;

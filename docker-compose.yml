@@ -1,7 +1,8 @@
 version: '3'
 services:
-  mysqlsrv:
+  mysql:
     image: mysql:8.0
+    hostname: mysql
     environment:
       - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
       - MYSQL_PASSWORD=${DB_PASSWORD}

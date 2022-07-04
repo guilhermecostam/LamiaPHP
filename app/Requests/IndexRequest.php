@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Request;
+namespace App\Requests;
 
 use App\Core\Request;
 
