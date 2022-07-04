@@ -12,7 +12,7 @@ abstract class Connection
 	public function __construct()
 	{
 		$this->db = new PDO(
-			"mysql:host={$_ENV['HOSTNAME']};dbname={$$_ENV['DB_NAME']}",
+			"mysql:host={$_ENV['DB_HOSTNAME']};dbname={$_ENV['DB_NAME']}",
 			$_ENV['DB_USERNAME'],
 			$_ENV['DB_PASSWORD']
 		);
