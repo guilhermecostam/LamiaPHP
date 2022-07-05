@@ -6,9 +6,25 @@ use App\Core\View;
 
 class Router
 {
+    /**
+     * The all routes of the system.
+     *
+     * @var array
+     */
     private array $routes;
+
+    /**
+     * The requested uri.
+     *
+     * @var string
+     */
     private string $uri;
 
+    /**
+     * Method that runs the requested route.
+     *
+     * @return array
+     */
     public function run():void
     {
         $this->match();
@@ -25,6 +41,11 @@ class Router
         (new $controllerName())->$methodName();
     }
 
+    /**
+     * Method that validate if uri match with routes of system.
+     *
+     * @return void
+     */
     public function match():void
     {
         $this->routes = include __DIR__ . '/../../routes/web.php';
@@ -35,6 +56,13 @@ class Router
         }
     }
 
+    /**
+     * Method that generate a route array.
+     *
+	 * @param string $controllerName
+	 * @param string $methodName
+     * @return array
+     */
     public function createRoute(string $controllerName, string $methodName): array
     {
         return [

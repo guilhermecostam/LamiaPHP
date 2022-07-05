@@ -9,8 +9,16 @@ use App\Core\View;
 
 abstract class Connection
 {
+	/**
+     * The PDO instance.
+     *
+     * @var PDO
+     */
 	private PDO $db;
 
+	/**
+     * Create a new PDO instance.
+     */
 	public function __construct()
 	{
 		try {
@@ -25,6 +33,13 @@ abstract class Connection
 		}
 	}
 	
+	/**
+     * Method that make a PDO statement.
+     *
+	 * @param string $sql
+	 * @param array $params
+     * @return PDOStatement $statement
+     */
 	public function query(string $sql, array $params = []): PDOStatement
 	{
 		$statement = $this->db->prepare($sql);
@@ -38,12 +53,26 @@ abstract class Connection
 		return $statement;
 	}
 
+	/**
+     * Method that returns a row of PDO statement.
+     *
+	 * @param string $sql
+	 * @param array $params
+     * @return array $result
+     */
 	public function row(string $sql, array $params = []): array
 	{
 		$result = $this->query($sql, $params);
 		return $result->fetchAll(PDO::FETCH_ASSOC);
 	}
 
+	/**
+     * Method that returns a column of PDO statement.
+     *
+	 * @param string $sql
+	 * @param array $params
+     * @return mixed $result
+     */
 	public function column(string $sql, array $params = []): mixed
 	{
 		$result = $this->query($sql, $params);

@@ -6,6 +6,11 @@ use App\Core\Request;
 
 class IndexRequest extends Request
 {
+    /**
+     * Method that merge and returns messages for failed validations.
+     *
+     * @return array
+     */
 	public function validations(): array
 	{
         return array_merge(

@@ -9,6 +9,11 @@ use Throwable;
 
 class IndexController extends Controller
 {
+	/**
+     * Method that renders the index page view.
+     *
+     * @return void
+     */
 	public function indexAction(): void
 	{
 		try {
