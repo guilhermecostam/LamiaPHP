@@ -9,11 +9,11 @@ class IndexRequest extends Request
 	public function validations(): array
 	{
         return array_merge(
-            parent::validate($_GET['lorem'], [
+            parent::validate('lorem', [
                 'required' => 'Field should be required',
                 'isString' => 'Field should be string',
             ]),
-            parent::validate($_GET['ipsum'], [
+            parent::validate('ipsum', [
                 'isBoolean' => 'Field should be boolean',
             ]),
         );
