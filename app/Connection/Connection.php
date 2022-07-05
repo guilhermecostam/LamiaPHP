@@ -4,6 +4,8 @@ namespace App\Connection;
 
 use PDO;
 use PDOStatement;
+use PDOException;
+use App\Core\View;
 
 abstract class Connection
 {
@@ -11,11 +13,16 @@ abstract class Connection
 
 	public function __construct()
 	{
-		$this->db = new PDO(
-			"mysql:host={$_ENV['DB_HOSTNAME']};dbname={$_ENV['DB_NAME']}",
-			$_ENV['DB_USERNAME'],
-			$_ENV['DB_PASSWORD']
-		);
+		try {
+			$this->db = new PDO(
+				"mysql:host={$_ENV['DB_HOSTNAME']};dbname={$_ENV['DB_NAME']}",
+				$_ENV['DB_USERNAME'],
+				$_ENV['DB_PASSWORD']
+			);
+		} catch (PDOException $e) {
+			(new View)->errorCode(500, ['throwable' => $e]);
+			die();
+		}
 	}
 	
 	public function query(string $sql, array $params = []): PDOStatement
