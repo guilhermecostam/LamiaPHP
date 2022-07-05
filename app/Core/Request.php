@@ -32,4 +32,6 @@ abstract class Request
     {
         return $this->validator->$validation($value);
     }
+
+    abstract public function validations(): array;
 }
