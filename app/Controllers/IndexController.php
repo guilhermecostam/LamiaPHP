@@ -15,7 +15,7 @@ class IndexController extends Controller
 			$messages = (new IndexRequest)->validations();
 			(new View)->render('index/index', $messages);
 		} catch (Throwable $th) {
-			(new View)->errorCode(400, ['throwable' => $th]);
+			(new View)->errorCode(500, ['throwable' => $th]);
 		}
 	}
 }
