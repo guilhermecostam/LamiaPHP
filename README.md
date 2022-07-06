@@ -6,12 +6,12 @@
 </div>
 
 ***
-## Indice
-[Introduction](#Introduction)
-[Installation](#Installation)
-[Running Lamia](#Running%20Lamia)
-[How to contribute](#How%20to%20contribute)
-[License](#License)
+## Content
+- [Introduction](#Introduction)
+- [Installation](#Installation)
+- [Running Lamia](#Running%20Lamia)
+- [How to contribute](#How%20to%20contribute)
+- [License](#License)
 ***
 ## Introduction
 Whenever I would start a simple PHP project without the need for a big framework to help me in the development process I would do the whole process of creating a scope, folder structure, settings and more. So to solve this I had the idea to create a simple base template for these occasions. However, as I was developing, I noticed that the project stopped being a template and became a framework. And so Lamia was born, a minimalist framework written in PHP.
