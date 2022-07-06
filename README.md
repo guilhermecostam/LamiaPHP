@@ -9,8 +9,8 @@
 ## Content
 - [Introduction](#Introduction)
 - [Installation](#Installation)
-- [Running Lamia](#Running%20Lamia)
-- [How to contribute](#How%20to%20contribute)
+- [Running Lamia](#Running-Lamia)
+- [How to contribute](#How-to-contribute)
 - [License](#License)
 ***
 ## Introduction
