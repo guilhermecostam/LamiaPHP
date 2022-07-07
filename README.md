@@ -10,7 +10,7 @@
 - [Introduction](#Introduction)
 - [Installation](#Installation)
 - [Running Lamia](#Running-Lamia)
-- [Models, controllers and views](#Models,-controllers-and-views)
+- [Models, controllers and views](#models-controllers-and-views)
 	- [Model](#Model)
 	- [Controller](#Controller)
 	- [View](#View)
