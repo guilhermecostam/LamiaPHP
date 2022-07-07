@@ -10,6 +10,10 @@
 - [Introduction](#Introduction)
 - [Installation](#Installation)
 - [Running Lamia](#Running-Lamia)
+- [Models, controllers and views](#Models,-controllers-and-views)
+	- [Model](#Model)
+	- [Controller](#Controller)
+	- [View](#View)
 - [Routes](#Routes)
 	- [Introducing routes](#Introducing-routes)
 	- [Merging routes](#Merging-routes)
@@ -63,6 +67,69 @@ composer install
 docker-compose up -d
 ```
 Finally, if all the steps have been followed correctly, the application is already running on localhost and ready to receive the [database migrations](#Database).
+***
+## Models, controllers and views
+### Model
+The models must be in the `app/Models/` directory and extend the Model abstract class:
+``` php
+# create a symbolic namespace, based in directory
+namespace App\Models;
+
+use App\Core\Model;
+
+class Coffee extends Model
+{
+    //
+}
+```
+The models in the application serve to communicate the [Controllers](#controller) with business rules and the database. Therefore, here you should write the database queries, which can be done using the `db` method. For more details, see the [PDO](#pdo) section.
+### Controller
+The controllers must be in the `app/Controllers/` directory and extend the Controller abstract class:
+```php
+namespace App\Controllers;
+
+use App\Core\Controller;
+
+class CoffeeController extends Controller
+{
+	//
+}
+```
+The controllers in the application serve to intermediate the requests sent by the [Views](#view) with the information provided by [Models](#model). This is also where the validations of the data provided on the forms are made.
+### View
+The views must be in the `app/Views/` directory and is the layer where the visual information of the application should be contained. Only templates should come here, CSS styles and JavaScript files that can be accessed publicly should go in the `public/` directory.
+
+To render the views you need to import the view class where you want to call it and call the `render` method with the specified directory: 
+```php
+use App\Core\View;
+
+// ...
+	(new View)->render('coffee/index');
+// ...
+```
+> Note that here you only need to specify the folder created for the view and the file name without the `.php`, because the `render` function already accesses the `app/Views/` directory directly, along with the extension.
+
+If you want to send information to the View scope, just create an array containing it. To access it in the view, just call the variable `$args` specifying the key sent:
+``` php
+# in controller
+$messages = [
+	'lorem' => 'ipsum'
+];
+
+(new View)->render('coffee/index', $messages);
+
+# in view
+$args['lorem']; // return must be: 'ipsum'
+```
+Finally, views also render http errors. Just create the view with the error you want in the `app/Views/error/` directory and call the `errorCode` function passing the error as an integer. It also has a `redirect` method which redirects to the url passed as a parameter:
+``` php
+# error code render
+(new View)->errorCode(500);
+
+# redirect to url
+(new View)->redirect('/');
+```
+> It is worth noting that the `errorCode` function also takes arguments like `render`.
 ***
 ## Routes
 ### Introducing routes
