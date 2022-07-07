@@ -1,11 +1,8 @@
 
 /* My variable colors */
 :root {
-  --primary-color: #3498DB;
-  --second-color: #71c1f7;
+  --primary-color: #f77373;
   --black-color: #000000;
-  --black-color-medium: #0c0c0c;
-  --semi-black: #1e1e1e;
   --white-color: #ffffff;
   --yellow: #f5b945;
 }
@@ -39,7 +36,7 @@ button {
 body {
   font-size: 1.6rem;
   -webkit-font-smooting: antialiased;
-  background-color: var(--black-color-medium);
+  background-color: var(--black-color);
 }
 
 /* Grid normal 12columns */
