@@ -9,6 +9,9 @@ services:
       - '443:443'
     volumes:
       - ./:/var/www/html
+    command: >
+      bash -c "a2enmod rewrite
+      && apache2-foreground"
     depends_on:
       - db
     links:
