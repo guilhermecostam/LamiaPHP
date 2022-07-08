@@ -2,7 +2,7 @@
 /* My variable colors */
 :root {
   --primary-color: #f77373;
-  --black-color: #000000;
+  --background-color: #1b232c;
   --white-color: #ffffff;
   --yellow: #f5b945;
 }
@@ -36,7 +36,7 @@ button {
 body {
   font-size: 1.6rem;
   -webkit-font-smooting: antialiased;
-  background-color: var(--black-color);
+  background-color: var(--background-color);
 }
 
 /* Grid normal 12columns */
