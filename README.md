@@ -268,7 +268,7 @@ Do you want to contribute to the Lamia? Just follow these instructions:
 `git commit -m 'feat: My new feature'`
 5. Push to your branch:
 `git push origin my-feature`
-6. Come in Pull Requests from the original project and create a pull request with your changes.
+6. Come in Pull Requests from the original project and create a pull request with your changes for `dev` branch.
 
 After the merge of your pull request is done, you can delete your branch and wait for the feedback.
 ***
